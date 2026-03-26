@@ -19,7 +19,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Ember & Thyme – Artisan Kitchen",
+  title: "Big taste - delicious cooks",
   description:
     "Slow-cooked comfort food made with seasonal ingredients. Order fresh via WhatsApp.",
 };
