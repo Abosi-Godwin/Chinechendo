@@ -5,6 +5,7 @@ type Stat = {
 
 type Restaurant = {
     name: string;
+    shortName: string;
     tagline: string;
     badge: string;
     description: string;
