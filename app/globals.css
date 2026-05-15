@@ -1,13 +1,13 @@
 /* app/globals.css */
 @import "tailwindcss";
 
-/* ── Tailwind v4: theme tokens via @theme ──────────────────── */
+
 @theme {
     --font-serif: var(--font-serif), Georgia, serif;
     --font-sans: var(--font-sans), system-ui, sans-serif;
 }
 
-/* ── Base ──────────────────────────────────────────────────── */
+/* ── Base ─── */
 html {
     scroll-behavior: smooth;
     background-color: #fdf6ec;

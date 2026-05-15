@@ -1,10 +1,9 @@
-// components/Navbar.tsx
 import { RESTAURANT, NAV_LINKS } from "../lib/constants";
 import { wa } from "../lib/utils";
 import WhatsAppIcon from "../components/icons/WhatsAppIcon";
 
 export default function Navbar() {
-    const { name } = RESTAURANT;
+    const { shortName } = RESTAURANT;
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FDF6EC]/90 backdrop-blur-md border-b border-[#F0DFC8]">
@@ -14,7 +13,7 @@ export default function Navbar() {
                     href="#hero"
                     className="font-serif font-bold text-xl text-[#1A0F00] tracking-tight"
                 >
-                    {name}
+                    {shortName}
                 </a>
 
                 {/* Desktop links */}

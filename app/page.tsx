@@ -1,4 +1,4 @@
-// app/page.tsx
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Menu from "./components/Menu";
@@ -15,12 +15,14 @@ export default function Page() {
             <main>
                 <Hero />
                 <Menu />
-                <About />
-                <Testimonials />
-                <Contact />
             </main>
             <Footer />
-            <FloatingWA />
         </>
     );
 }
+  {/*   <About />
+                <Testimonials />
+                <Contact />
+           
+            <FloatingWA />
+            */}

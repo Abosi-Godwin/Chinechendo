@@ -1,131 +1,159 @@
-/*export const RESTAURANT = {
-    name: "Big Taste",
-    tagline: "Where Every Bite Tells a Story.",
-    badge: "Est. 2019 · Artisan Kitchen",
-    description:
-        "Big Taste started as a tiny Sunday pop-up in a friend's backyard. Today we run a full kitchen — but the soul hasn't changed one bit. Everything is made from scratch, using locally sourced ingredients that change with the seasons.",
-    descriptionExtra:
-        "We believe food should be real, honest, and a little bit special. No shortcuts. No microwave. Just proper cooking, done with care.",
-    phone: "+2348139333781",
-    
-    address: "iyekhie girls, opp. Hamaz filling station",
-    addressSub: "Auchi 312101, Edo",
-    hours: {
-        weekday: "Mon–Fri: 11am – 10pm",
-        weekend: "Sat–Sun: 10am – 11pm"
-    },
-    whatsapp: "+2348139333781",
-    stats: [
-        { value: "2,400+", label: "Happy Customers" },
-        { value: "6 Days", label: "Open Per Week" },
-        { value: "100%", label: "Made Fresh" }
-    ]
-};*/
+import { Restaurant, MenuItem, Review, NavLink } from "./type";
 
-export const RESTAURANT = {
-    name: "Big Taste",
-    tagline: "Delicious meals, fast delivery in Auchi.",
-    badge: "Fresh Meals · Affordable Prices",
+import image1 from "../../public/web pics/image1.jpg";
+import image2 from "../../public/web pics/image2.jpg";
+import image3 from "../../public/web pics/image3.jpg";
+import image4 from "../../public/web pics/image4.jpg";
+import image5 from "../../public/web pics/image5.jpg";
+import image6 from "../../public/web pics/image6.jpg";
+
+export const RESTAURANT: Restaurant = {
+    name: "Chinechendo Restaurant And Bar",
+    shortName: "Chinechendo",
+    tagline: "Good Food. Cold Drinks. Great Company.",
+    badge: "Nigerian Cuisine · Full Bar · GRA Onitsha",
     description:
-        "Big Taste is known for preparing tasty and satisfying local meals every day. We serve a variety of Nigerian dishes made fresh with quality ingredients.",
+        "Chinechendo is where Onitsha comes to eat, drink, and unwind. We serve authentic Nigerian dishes made fresh daily alongside a well-stocked bar — right in the heart of GRA.",
     descriptionExtra:
-        "Whether you're eating in or ordering from home, we make sure your food is hot, fresh, and delivered on time.",
-    phone: "+2348139333781",
-    address: "Iyekhie Girls, Opp. Hamaz Filling Station",
-    addressSub: "Auchi, Edo State",
+        "Whether you're grabbing a quick lunch, dining with family, or ending the night with friends — your table is always ready at 1A Ezenwa Street.",
+    phone: "FILL_IN", // e.g. "+2348XXXXXXXXX"
+    address: "1A Ezenwa Street, GRA",
+    addressSub: "Onitsha, Anambra State",
     hours: {
-        weekday: "Mon–Fri: 10am – 9pm",
-        weekend: "Sat–Sun: 10am – 10pm"
+        weekday: "Mon–Fri: 10am – 10pm", // FILL_IN — confirm with owner
+        weekend: "Sat–Sun: 10am – 11pm" // FILL_IN
     },
-    whatsapp: "+2348139333781",
+    whatsapp: "+2349066016591",
     stats: [
-        { value: "1,000+", label: "Happy Customers" },
-        { value: "Fast", label: "Delivery Service" },
+        { value: "GRA", label: "Prime Location" },
+        { value: "Full", label: "Bar Service" },
         { value: "Daily", label: "Fresh Meals" }
     ]
 };
- 
-export const MENU = [
+
+export const MENU: MenuItem[] = [
     {
-        emoji: "🍔",
+        emoji: "🍛",
+        image: image1,
         name: "Jollof Rice + Chicken",
-        desc: "Smoky jollof rice served with grilled chicken",
-        price: "₦2,500"
+        desc: "Smoky party jollof rice served with well-seasoned grilled chicken",
+        price: 2500
     },
-    {emoji: "🍕",
-        name: "Fried Rice + Turkey",
-        desc: "Tasty fried rice with vegetables and turkey",
-        price: "₦3,000"
-    },
-    { emoji: "🍗",
-        name: "Pepper Soup",
-        desc: "Hot and spicy goat meat pepper soup",
-        price: "₦2,000"
-    },
-    {emoji: "🥗",
+    {
+        emoji: "🥣",
+        image: image2,
         name: "Egusi Soup + Pounded Yam",
-        desc: "Rich egusi soup with assorted meat",
-        price: "₦3,500"
+        desc: "Rich, thick egusi soup with assorted meat and fresh fish",
+        price: 2500
     },
-    {emoji: "🍝",
-        name: "Indomie Special",
-        desc: "Noodles with egg, sausage, and chicken",
-        price: "₦2,000"
+    {
+        emoji: "🍲",
+        image: image3,
+        name: "Ofe Onugbu + Fufu",
+        desc: "Traditional Igbo bitter leaf soup with assorted meat",
+        price: 2500
     },
-    { emoji: "🍰",
-        name: "Grilled Fish",
-        desc: "Well-seasoned grilled fish with sauce",
-        price: "₦4,000"
+    {
+        emoji: "🐟",
+        image: image4,
+        name: "Catfish Pepper Soup",
+        desc: "Hot, spicy catfish pepper soup — the perfect bar companion",
+        price: 2500
+    },
+    {
+        emoji: "🍚",
+        image: image5,
+        name: "Fried Rice + Turkey",
+        desc: "Well-seasoned fried rice with mixed vegetables and turkey",
+        price: 2500
+    },
+    {
+        emoji: "🥩",
+        image: image6,
+        name: "Nkwobi",
+        desc: "Spiced cow foot in palm kernel sauce — a true Onitsha classic",
+        price: 2500
     }
 ];
-export const REVIEWS1 = [
+
+// Extend MenuItem type to include drink category
+type DrinkItem = MenuItem & {
+    category: "Beer" | "Cocktail" | "Local" | "Spirit" | "Non-Alcoholic";
+};
+
+export const DRINKS: DrinkItem[] = [
     {
-        text: "The brisket burger is genuinely the best I've had in this city. I order it every single Friday without fail. The WhatsApp ordering is so convenient.",
-        name: "Sarah M.",
-        role: "Regular since 2021",
-        initial: "S",
-        featured: false
+        emoji: "🍺",
+        name: "Star Lager",
+        desc: "Nigeria's favourite cold lager",
+        price: "FILL_IN",
+        category: "Beer"
     },
     {
-        text: "Ordered for a family gathering and everyone was obsessed. The herb chicken was perfectly moist and the portions are incredibly generous. We'll be back!",
-        name: "James K.",
-        role: "Food blogger",
-        initial: "J",
+        emoji: "🍺",
+        name: "Heineken",
+        desc: "Smooth premium lager, served ice cold",
+        price: "FILL_IN",
+        category: "Beer"
+    },
+    {
+        emoji: "🍺",
+        name: "Guinness",
+        desc: "Rich and full-bodied stout",
+        price: "FILL_IN",
+        category: "Beer"
+    },
+    {
+        emoji: "🍹",
+        name: "Chapman",
+        desc: "Fruity, refreshing Nigerian cocktail with a kick",
+        price: "FILL_IN",
+        category: "Cocktail"
+    },
+    {
+        emoji: "🥛",
+        name: "Palm Wine",
+        desc: "Fresh, naturally fermented — straight from the tap",
+        price: "FILL_IN",
+        category: "Local"
+    },
+    {
+        emoji: "🥤",
+        name: "Soft Drinks",
+        desc: "Coke, Fanta, Sprite, Maltina and more",
+        price: "FILL_IN",
+        category: "Non-Alcoholic"
+    }
+];
+
+// FILL_IN — pull these from the owner's Google reviews
+export const REVIEWS: Review[] = [
+    {
+        text: "Mr A is good",
+        name: "Mr A",
+        role: "Customer",
+        initial: "F",
         featured: true
     },
     {
-        text: "The Basque cheesecake deserves its own award. Creamy, perfectly burnt on top, and the compote is seasonal — it changes every few weeks. Brilliant.",
-        name: "Amara O.",
-        role: "Dessert fanatic 🍰",
-        initial: "A",
+        text: "Mr B is good",
+        name: "Mr B",
+        role: "Regular Customer",
+        initial: "F",
+        featured: false
+    },
+    {
+        text: "He is g",
+        name: "Mr G",
+        role: "Customer",
+        initial: "F",
         featured: false
     }
 ];
-export const REVIEWS = [
-  {
-    text: "Their jollof rice is very tasty and the delivery was fast. I’ll definitely order again.",
-    name: "Chinedu O.",
-    role: "Customer",
-    initial: "C",
-    featured: true
-  },
-  {
-    text: "Affordable meals and good portions. I like how easy it is to order on WhatsApp.",
-    name: "Amaka E.",
-    role: "Regular Customer",
-    initial: "A",
-    featured: false
-  },
-  {
-    text: "Food is always fresh and hot. One of the best spots around Auchi.",
-    name: "Sadiq M.",
-    role: "Customer",
-    initial: "S",
-    featured: false
-  }
-];
-export const NAV_LINKS = [
+
+export const NAV_LINKS: NavLink[] = [
     { label: "Menu", href: "#menu" },
+    { label: "Bar", href: "#bar" },
     { label: "About", href: "#about" },
     { label: "Reviews", href: "#testimonials" },
     { label: "Contact", href: "#contact" }
