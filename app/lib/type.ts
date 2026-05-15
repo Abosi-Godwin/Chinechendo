@@ -1,3 +1,6 @@
+import type { StaticImageData } from "next/image";
+
+
 type Stat = {
     value: string;
     label: string;
@@ -20,16 +23,15 @@ type Restaurant = {
     whatsapp: string;
     stats: Stat[];
 };
+ 
 
 type MenuItem = {
     emoji: string;
     name: string;
     desc: string;
     price: number;
-    image?: string;
+    image?: StaticImageData;   
 };
-
-
 type Review = {
     text: string;
     name: string;
