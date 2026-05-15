@@ -1,6 +1,5 @@
 import type { StaticImageData } from "next/image";
 
-
 type Stat = {
     value: string;
     label: string;
@@ -23,14 +22,13 @@ type Restaurant = {
     whatsapp: string;
     stats: Stat[];
 };
- 
 
 type MenuItem = {
     emoji: string;
     name: string;
     desc: string;
     price: number;
-    image?: StaticImageData;   
+    image?: StaticImageData;
 };
 type Review = {
     text: string;
@@ -44,5 +42,4 @@ type NavLink = {
     label: string;
     href: string;
 };
-
-export { Restaurant, MenuItem, Review, NavLink };
+export type { Restaurant, MenuItem, Review, NavLink };
