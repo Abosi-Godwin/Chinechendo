@@ -86,42 +86,42 @@ export const DRINKS: DrinkItem[] = [
         emoji: "🍺",
         name: "Star Lager",
         desc: "Nigeria's favourite cold lager",
-        price: "FILL_IN",
+        price: 5000,
         category: "Beer"
     },
     {
         emoji: "🍺",
         name: "Heineken",
         desc: "Smooth premium lager, served ice cold",
-        price: "FILL_IN",
+        price: 5000,
         category: "Beer"
     },
     {
         emoji: "🍺",
         name: "Guinness",
         desc: "Rich and full-bodied stout",
-        price: "FILL_IN",
+        price: 5000,
         category: "Beer"
     },
     {
         emoji: "🍹",
         name: "Chapman",
         desc: "Fruity, refreshing Nigerian cocktail with a kick",
-        price: "FILL_IN",
+        price: 5000,
         category: "Cocktail"
     },
     {
         emoji: "🥛",
         name: "Palm Wine",
         desc: "Fresh, naturally fermented — straight from the tap",
-        price: "FILL_IN",
+        price: 5000,
         category: "Local"
     },
     {
         emoji: "🥤",
         name: "Soft Drinks",
         desc: "Coke, Fanta, Sprite, Maltina and more",
-        price: "FILL_IN",
+        price: 5000,
         category: "Non-Alcoholic"
     }
 ];
